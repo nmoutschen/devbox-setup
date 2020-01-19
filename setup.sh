@@ -9,10 +9,10 @@ if [ "$EUID" -e 0 ]; then
 fi
 
 # Install python 3.8.1
-bash python.sh 3.8.1
+bash $(dirname $0)/python.sh ${PYTHON_VERSION:-3.8.1}
 
 # Install node 12.x
-bash node.sh 12.x
+bash $(dirname $0)/node.sh ${NODE_VERSION:-12.x}
 
 # Install go 1.13
-bash go.sh 1.13
+bash $(dirname $0)/go.sh ${GO_VERSION:-1.13}
