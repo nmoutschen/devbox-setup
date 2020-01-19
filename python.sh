@@ -23,10 +23,10 @@ xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 
 # Install pyenv
 curl https://pyenv.run | bash
-echo > ~/.bashrc << EOF
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+echo >> ~/.bashrc << EOF
+export PATH="\$HOME/.pyenv/bin:\$PATH"
+eval "\$(pyenv init -)"
+eval "\$(pyenv virtualenv-init -)"
 EOF
 
 # Reload bashrc
